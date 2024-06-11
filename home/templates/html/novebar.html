@@ -1,0 +1,65 @@
+{% load static %}
+<style>
+
+.nav{
+    background: #ffffff;
+    color: #FFF;
+    display: grid;
+    grid-template-columns: auto auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 23234;
+}
+.nav .logo{
+    padding: 20px;
+
+}
+.nav .logo a{
+    color: #FFF;
+    text-decoration: none
+}
+.nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul li{
+    padding: 20px;
+    padding-top: 30px;
+    list-style: none
+}
+ul li a:hover{
+  transform: translateY(left right);
+  transition: 100ms;
+  border-bottom: 2px solid red;
+}
+ul li a{
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+}
+@media only screen and (max-width: 500px) {
+  ul li{
+    padding: 10px;
+    padding-top: 30px;
+    list-style: none
+}
+}
+  </style>
+<div class="nav">
+  <div class="logo">
+    <a href="#home"><img src="{% static 'images/he.jpg' %}" height="40px" width="40px" style="border-radius: 50%;" alt=""></a>
+  </div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#product">Product</a></li>
+    <li><a href="#contact">contact</a></li>
+  </ul>
+</div>
