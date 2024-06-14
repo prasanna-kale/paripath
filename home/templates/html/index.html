@@ -369,9 +369,6 @@ nav a.active {
       display: grid;
    }
    .product_img{
-      height: 450px;
-   }
-   .product_img{
       height: 470px;
    }
    .product_img_div{
@@ -430,9 +427,6 @@ nav a.active {
       display: grid;
    }
    .product_img{
-      height: 400px;
-   }  
-   .product_img{
       height: 450px;
    }  
    .product_detail{
@@ -461,9 +455,6 @@ nav a.active {
       display: grid;
    }
    .product_img{
-      height: 350px;
-   } 
-   .product_img{
       height: 370px;
    } 
    .product_detail{
@@ -486,7 +477,7 @@ nav a.active {
 
       <!--* home *-->
       <section id="home" >
-         <img class="header_img" style="display: none;" src="{% static 'images/mobile.jpg' %}" alt=" ">
+         <img class="header_img" src="{% static 'images/mobile.jpg' %}" alt=" ">
          <div class="hedlines text-center">
             <li>🏫महाराष्ट्रातील सर्व शाळा - शिक्षक, विद्यार्थी - पालक व विविध स्पर्धा परीक्षार्थी सर्वांसाठी उपयुक्त</li><hr>
             <li>🎯 शालेय परिपाठाचे महाराष्ट्रातील / भारतातील एकमेव परिपूर्ण पुस्तक</li><hr>
@@ -515,19 +506,21 @@ nav a.active {
               <!--* product *--> 
               <div>
             <section class="section" id="product">
-               <div class="product_img_div">
-                  <img class="product_img" style="display: none;"  src="{% static 'images/mobile.jpg' %}" alt=" ">
-               </div>
-               <div class="product_detail">
-                  <h6>&#128214;पुस्तकाचे नाव - शालेय परिपाठ</h6><br>
-                  <h6>✍ लेखक - अजित कणसे</h6><br>
-                  <h6>📚 प्रकाशक - कमलाई प्रकाशन</h6><br>
-                  <h6>📘 पुस्तकाची साईज - A4 साईज</h6><br>
-                  <h6>📄 एकूण पाने - 424</h6><br>
-                  <h6>📄 एकूण पाने - 424</h6><br>
-                  <h6>💵मूळ किंमत - रु. 600/-</h6><br>
-                  <h6>💵सवलत मूल्य -  रु. 500/- घरपोच</h6><br>
-                  <h6>🎉जास्त पुस्तके घेतल्यास सवलत मूल्यावर सवलत मिळेल.</h6><br>
+               <div style="display: flex; justify-content: center; align-items: center;margin-bottom: 20px;"  >
+                  <div class="product_img_div">
+                     <img class="product_img"  src="{% static 'images/mobile.jpg' %}" alt=" ">
+                  </div>
+                  <div class="product_detail">
+                     <h6>&#128214;पुस्तकाचे नाव - शालेय परिपाठ</h6><br>
+                     <h6>✍ लेखक - अजित कणसे</h6><br>
+                     <h6>📚 प्रकाशक - कमलाई प्रकाशन</h6><br>
+                     <h6>📘 पुस्तकाची साईज - A4 साईज</h6><br>
+                     <h6>📄 एकूण पाने - 424</h6><br>
+                     <h6>📄 एकूण पाने - 424</h6><br>
+                     <h6>💵मूळ किंमत - रु. 600/-</h6><br>
+                     <h6>💵सवलत मूल्य -  रु. 500/- घरपोच</h6><br>
+                     <h6>🎉जास्त पुस्तके घेतल्यास सवलत मूल्यावर सवलत मिळेल.</h6><br>
+                  </div>
                </div>
         </section>
       </div>
@@ -565,7 +558,7 @@ nav a.active {
          <a href="https://www.youtube.com/" class="float_youtube">
             <i class="fa fa-youtube-play"></i>
          </a>
-         <a href="#" class="float_fesbook">
+         <a href="https://www.facebook.com/groups/969063054970263/?ref=share&mibextid=NSMWBT" class="float_fesbook">
             <i class="fa fa-facebook-f"></i>
          </a>
          <script>
