@@ -86,7 +86,7 @@ h1{
    margin-top: 90px;
    border-radius: 10px;
    margin-right: 10px;
-   margin-left: 40vh;
+   margin-left: 10vh;
 }
 .hedlines{
    margin-top: 130px;
@@ -289,6 +289,9 @@ nav a.active {
    }
 }
 @media only screen and (max-width: 700px) {
+   .header_img_back{
+      display: none;
+   }
    section{
       width: 100%;
       img{
@@ -296,7 +299,7 @@ nav a.active {
       }
    }
    #product{
-      height: 100vh;
+      height: 150vh;
       display: grid;
       margin-top: 200px;
    }
@@ -322,6 +325,7 @@ nav a.active {
 
    .product_img{
       height: 460px;
+      margin-top: -150px;
    }
    .product_img_div{
       width: 100%;
@@ -330,7 +334,7 @@ nav a.active {
    } 
    .product_detail{
       margin-left: 200px;
-      margin-top: -200px;
+      margin-top: 40px;
    }  
    nav{
       display: flex;
@@ -407,6 +411,9 @@ nav a.active {
 }
 }
 @media only screen and (max-width: 500px) {
+   header {
+   top: 10px;
+   }
    .header_img{
       margin-left: auto;
       margin-right: auto;
@@ -437,8 +444,8 @@ nav a.active {
    .header_img{
       margin-left: auto;
       margin-right: auto;
-      width: 85%;
-      height: 65%;
+      width: 80%;
+      height: 80%;
       margin-bottom: 0;
       margin-top: 90px;
    }
@@ -477,7 +484,8 @@ nav a.active {
 
       <!--* home *-->
       <section id="home" >
-         <img class="header_img" src="{% static 'images/mobile.jpg' %}" alt=" ">
+         <img class="header_img header_img_back" src="{% static 'images/back.jpg' %}" alt=" ">
+         <img class="header_img" src="{% static 'images/mobile.jpg' %}" style="margin-left: 0;" alt=" ">
          <div class="hedlines text-center">
             <li>🏫महाराष्ट्रातील सर्व शाळा - शिक्षक, विद्यार्थी - पालक व विविध स्पर्धा परीक्षार्थी सर्वांसाठी उपयुक्त</li><hr>
             <li>🎯 शालेय परिपाठाचे महाराष्ट्रातील / भारतातील एकमेव परिपूर्ण पुस्तक</li><hr>
@@ -506,7 +514,7 @@ nav a.active {
               <!--* product *--> 
               <div>
             <section class="section" id="product">
-               <div style="display: flex; justify-content: center; align-items: center;margin-bottom: 20px;"  >
+               <div>
                   <div class="product_img_div">
                      <img class="product_img"  src="{% static 'images/mobile.jpg' %}" alt=" ">
                   </div>
