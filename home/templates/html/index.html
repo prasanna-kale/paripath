@@ -164,7 +164,7 @@ h1{
 	width:60px;
 	height:60px;
 	bottom:40px;
-	right:40px;
+	right:10px;
 	background-color:rgb(77, 221, 25);
 	color:#FFF;
 	border-radius:50px;
@@ -183,7 +183,7 @@ h1{
 	width:60px;
 	height:60px;
 	bottom:110px;
-	right:40px;
+	right:10px;
 	background-color:rgb(255, 255, 255);
 	border-radius:50px;
    text-decoration: none;
@@ -201,7 +201,7 @@ h1{
 	width:60px;
 	height:60px;
 	bottom:180px;
-	right:40px;
+	right:10px;
 	background: #3b5998; 
 	border-radius:50px;
    text-decoration: none;
@@ -412,17 +412,15 @@ nav a.active {
 }
 @media only screen and (max-width: 500px) {
    header {
-   top: 10px;
+   top: 0;
    }
    .header_img{
-      margin-left: auto;
-      margin-right: auto;
       height: 300px;
       margin-bottom: 0;
       margin-top: 90px;
    }
    .hedlines{
-      margin-top: 150px;
+      margin-top: 100px;
       height: auto;
       width: 350px;
       overflow: scroll;
@@ -438,7 +436,7 @@ nav a.active {
    }  
    .product_detail{
       margin-left: 90px;
-   }   
+   }  
 }
 @media only screen and (max-width: 400px) {
    .header_img{
@@ -450,7 +448,7 @@ nav a.active {
       margin-top: 90px;
    }
    .hedlines{
-      margin-top: 150px;
+      margin-top: 40px;
       height: auto;
       width: 350px;
       overflow: scroll;
@@ -467,6 +465,9 @@ nav a.active {
    .product_detail{
       margin-left: 50px;
    } 
+   .header_img_mobile{
+      margin-left: auto;
+   }
    }
 </style>
 </head>
@@ -485,7 +486,7 @@ nav a.active {
       <!--* home *-->
       <section id="home" >
          <img class="header_img header_img_back" src="{% static 'images/back.jpg' %}" alt=" ">
-         <img class="header_img" src="{% static 'images/mobile.jpg' %}" style="margin-left: 0;" alt=" ">
+         <img class="header_img header_img_mobile" src="{% static 'images/mobile.jpg' %}"  alt=" ">
          <div class="hedlines text-center">
             <li>🏫महाराष्ट्रातील सर्व शाळा - शिक्षक, विद्यार्थी - पालक व विविध स्पर्धा परीक्षार्थी सर्वांसाठी उपयुक्त</li><hr>
             <li>🎯 शालेय परिपाठाचे महाराष्ट्रातील / भारतातील एकमेव परिपूर्ण पुस्तक</li><hr>
