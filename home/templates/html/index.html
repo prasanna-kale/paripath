@@ -92,55 +92,6 @@ h1{
 .hedlines li{
    font-size: 20px;
 }
-.nav{
-    background: #ffffff;
-    color: #FFF;
-    display: grid;
-    grid-template-columns: auto auto;
-    position: fixed;
-    height: 75px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 23234;
-    overflow-x: scroll;
-}
-.nav .logo{
-    padding: 10px;
-
-}
-.nav .logo a{
-    color: #FFF;
-    text-decoration: none
-}
-.nav ul{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
-}
-ul li{
-    padding: 10px;
-    padding-top: 10px;
-    padding-bottom: -100px;
-    list-style: none
-}
-ul li a:hover{
-  transform: translateY(left right);
-  transition: 100ms;
-  border-bottom: 2px solid red;
-}
-ul li a{
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 15px;
-}
-ul li a.active{
-  border-bottom: 2px solid red;
-}
 
 .img{
 	max-width: 100%;
@@ -220,11 +171,73 @@ ul li a.active{
    justify-content: center;
    align-items: center;
 	box-shadow: 2px 2px 3px #999;
+   i{
+      font-size:35px;
+   }
+}
+
+.float_youtube{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:110px;
+	right:40px;
+	background-color:rgb(255, 255, 255);
+	border-radius:50px;
+   text-decoration: none;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+	box-shadow: 2px 2px 3px #999;
+   i{
+      font-size:35px;
+      color: red;
+   }
+}
+.float_fesbook{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:180px;
+	right:40px;
+	background: #3b5998; 
+	border-radius:50px;
+   text-decoration: none;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+	box-shadow: 2px 2px 3px #999;
+   i{
+      font-size:35px;
+      color: rgb(255, 255, 255);
+   }
 }
 
 .my-float{
 	margin-top:22px;
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    display: flex;
+    z-index: 4535100;
+}
+nav a {
+    font-size: 18px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: .3s;
+}
+nav a.active {
+   border-bottom: 2px solid red;
+}
+
 
 
 
@@ -302,7 +315,9 @@ ul li a.active{
       margin-left: 200px;
       margin-top: -100px;
    }  
-   
+   nav{
+      display: flex;
+   }
    .about_img{
       margin-top: 10px;
       margin-left: auto;
@@ -353,14 +368,31 @@ ul li a.active{
    .float{
 	width:40px;
 	height:40px;
+   i{
+      font-size:25px;
+   }
+}
+   .float_youtube{
+	width:40px;
+	height:40px;
+   margin-bottom: -20px;
+   
+   i{
+      font-size:24px;
+      color: red;
+      }
+   }
+   .float_fesbook{
+	width:40px;
+	height:40px;
+   margin-bottom: -40px;
+   i{
+      font-size:24px;
+      color: rgb(255, 255, 255);
+   }
 }
 }
 @media only screen and (max-width: 500px) {
-   ul li{
-    padding: 10px;
-    padding-top: 30px;
-    list-style: none
-}
    .header_img{
       margin-left: auto;
       margin-right: auto;
@@ -425,17 +457,15 @@ ul li a.active{
 </head>
 <body>
     
-   <div class="nav">
-      <div class="logo">
-        <a href="#home"><img src="{% static 'images/he.jpg' %}" height="40px" width="40px" style="border-radius: 50%;" alt=""></a>
-      </div>
-      <ul>
-        <li><a id="#home_nav" href="#home" class="nav_links">Home</a></li>
-        <li><a id="#about_nav" href="#about"class="nav_links">About</a></li>
-        <li><a id="#product_nav" href="#product"class="nav_links">Product</a></li>
-        <li><a id="#contact_nav" href="#contact"class="nav_links">contact</a></li>
-      </ul>
-    </div>
+   <header>
+      <a href="#" class="logo"><img src="{% static 'images/he.jpg' %}" height="30px" width="30px" style="border-radius: 50%;" alt=""></a>
+      <nav>
+          <a href="#home" class="active">Home</a>
+          <a href="#about">About</a>
+          <a href="#product">product</a>
+          <a href="#contact">Contact</a>
+      </nav>
+  </header>
 
         <section id="home">
          <img class="header_img" style="display: none;" src="{% static 'images/mobile.jpg' %}" alt=" ">
@@ -450,8 +480,9 @@ ul li a.active{
             </section>
             <section class="section" id="about">
 
-               
-               <img width="370px"  src="{% static 'images/about.jpg' %}" alt=" ">
+               <div class="about_img_div text-center">
+                  <img width="370px"  src="{% static 'images/about.jpg' %}" alt=" ">
+               </div>
                <div class="about_img_div text-center">
                   <img class="about_img"  src="{% static 'images/Antrang.jpg' %}" alt=" ">
                   <img class="about_img"  src="{% static 'images/arpen.jpg' %}" alt=" ">
@@ -498,10 +529,33 @@ ul li a.active{
          </article>
          </div>
       </section>  
-      <a href="https://chat.whatsapp.com/KPNUx7LyQnS5ddhsCM7I6A" class="float">
+      <a href="https://api.whatsapp.com/send?text=hi&phone=+91 8390365366" class="float">
          <i class="fa fa-whatsapp" style="font-size:24px"></i>
          </a>
-
+         <a href="https://www.youtube.com/" class="float_youtube">
+            <i class="fa fa-youtube-play"></i>
+         </a>
+         <a href="#" class="float_fesbook">
+            <i class="fa fa-facebook-f"></i>
+         </a>
+         <script>
+            let sections = document.querySelectorAll('section');
+      let navLinks = document.querySelectorAll('header nav a');
+      window.onscroll = () => {
+          sections.forEach(sec => {
+              let top = window.scrollY;
+              let offset = sec.offsetTop - 150;
+              let height = sec.offsetHeight;
+              let id = sec.getAttribute('id');
+              if(top >= offset && top < offset + height) {
+                  navLinks.forEach(links => {
+                      links.classList.remove('active');
+                      document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+                  });
+              };
+          });
+      };
+          </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
