@@ -29,16 +29,18 @@ section{
    position: relative;
 }
 #home{
-   height: 100vh;
+   height: fit-content;
    display: flex;
 }
 
 #about{
-   height: 110vh;
+   height: fit-content;
+   margin-top: 100px;
 }
 
 #product{
-   height: 100vh;
+   margin-top: 50px;
+   height: fit-content;
    display: flex;
 }
 .product_detail{
@@ -237,8 +239,18 @@ nav a {
 nav a.active {
    border-bottom: 2px solid red;
 }
-
-
+.contact_box{
+   padding: 10px;
+   border-radius: 20px;
+   background-image: linear-gradient(to left bottom, #cfcfcf, #f7f7f7, #d5d5d5, #eaeaea, #ffffff);
+   height: fit-content;
+         }
+.about_box{
+   padding: 10px;
+   border-radius: 20px;
+   background-image: linear-gradient(to left bottom, #cfcfcf, #f7f7f7, #d5d5d5, #eaeaea, #ffffff);
+   height: fit-content;
+}
 
 
 
@@ -277,9 +289,16 @@ nav a.active {
    }
 }
 @media only screen and (max-width: 700px) {
+   section{
+      width: 100%;
+      img{
+         border-radius: 10px;
+      }
+   }
    #product{
-      height: 200vh;
+      height: 100vh;
       display: grid;
+      margin-top: 200px;
    }
    .header_img{
       margin-left: auto;
@@ -300,9 +319,7 @@ nav a.active {
    #home{
       display: grid;
    }
-   .product_img{
-      height: 450px;
-   }
+
    .product_img{
       height: 460px;
    }
@@ -313,7 +330,7 @@ nav a.active {
    } 
    .product_detail{
       margin-left: 200px;
-      margin-top: -100px;
+      margin-top: -200px;
    }  
    nav{
       display: flex;
@@ -328,7 +345,7 @@ nav a.active {
  
   
 #about{
-   height: 120vh;
+   height: fit-content;
 }
 }
 @media only screen and (max-width: 600px) {
@@ -467,7 +484,8 @@ nav a.active {
       </nav>
   </header>
 
-        <section id="home">
+      <!--* home *-->
+      <section id="home" >
          <img class="header_img" style="display: none;" src="{% static 'images/mobile.jpg' %}" alt=" ">
          <div class="hedlines text-center">
             <li>🏫महाराष्ट्रातील सर्व शाळा - शिक्षक, विद्यार्थी - पालक व विविध स्पर्धा परीक्षार्थी सर्वांसाठी उपयुक्त</li><hr>
@@ -476,23 +494,26 @@ nav a.active {
             <li>🔬 अभ्यासपूर्ण, वस्तुनिष्ठ माहितीचा खजिना</li><hr>
             <a href="#product" class="btn btn-outline-primary">Read More</a>
             </div>
-            
-            </section>
-            <section class="section" id="about">
+      </section>
+      <!--// home end //-->
+      <!--* about *-->
 
-               <div class="about_img_div text-center">
-                  <img width="370px"  src="{% static 'images/about.jpg' %}" alt=" ">
+            <section class="section" id="about"  >
+               <div class="about_box">
+                  <div class="about_img_div text-center">
+                     <h5 style="color:blue; font-weight: 600;">About</h5>
+                     <img width="350px"  src="{% static 'images/about.jpg' %}" alt=" ">
+                  </div>
+                  <div class="about_img_div text-center">
+                     <img class="about_img"  src="{% static 'images/Antrang.jpg' %}" alt=" ">
+                     <img class="about_img"  src="{% static 'images/arpen.jpg' %}" alt=" ">
+                  </div>
                </div>
-               <div class="about_img_div text-center">
-                  <img class="about_img"  src="{% static 'images/Antrang.jpg' %}" alt=" ">
-                  <img class="about_img"  src="{% static 'images/arpen.jpg' %}" alt=" ">
-               </div>
-               
-               
-            
-            
             </section>
 
+            <!--// about end //-->
+              <!--* product *--> 
+              <div>
             <section class="section" id="product">
                <div class="product_img_div">
                   <img class="product_img" style="display: none;"  src="{% static 'images/mobile.jpg' %}" alt=" ">
@@ -509,26 +530,35 @@ nav a.active {
                   <h6>🎉जास्त पुस्तके घेतल्यास सवलत मूल्यावर सवलत मिळेल.</h6><br>
                </div>
         </section>
+      </div>
+        <!--//product end//-->
 
-        <section class="section text-center" id="contact">
-         <div class="card-list" style="margin: auto;">
-            <article class="card">
-            <figure class="card-image">
-               <img  src="{% static 'images/owner.jpg' %}" alt=" " class="img" />
-            </figure>
-            <div class="card-header">
-               <a>📱संपर्क : 8390365366</a><br><br>
-               <a>पत्ता  : <br><br> <h4 style="font-size: 20px; font-weight: 600;">कमलाई प्रकाशन ता. करमाळा,<br> जि. सोलापूर (महाराष्ट्र)</h4></a>
+         <!--* contact *-->
+        <section class="section text-center" id="contact" >
+         <div class="contact_box">
+            <div class="card-list" style="margin: auto;">
+               <article class="card">
+               <figure class="card-image">
+                  <img  src="{% static 'images/owner.jpg' %}" alt=" " class="img" />
+               </figure>
+               <div class="card-header">
+                  <a>📱संपर्क : 8390365366</a><br><br>
+                  <a>पत्ता  : <br><br> <h4 style="font-size: 20px; font-weight: 600;">कमलाई प्रकाशन ता. करमाळा,<br> जि. सोलापूर (महाराष्ट्र)</h4></a>
+               </div>
+               <div class="location">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15143.050553823827!2d75.188240946866!3d18.403650933053367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc48fd908f67c1d%3A0xa6b0cb7782579870!2sKarmala%2C%20Maharashtra%20413203!5e0!3m2!1sen!2sin!4v1718257431211!5m2!1sen!2sin" width="337" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+               </div>
+               <div class="card-footer">
+                  📧 'शालेय परिपाठ' हे पुस्तक मागवण्यासाठी कृपया आपले संपूर्ण नाव, पिनकोडसह पत्ता, फोन नंबर या मोबाईल 8390365366 क्रमांकावर फोन पे अथवा गुगल पे अथवा QR कोडने पैसे सेंड केलेला स्क्रीन शॉट पाठवावा.
+               </div>
+            </article>
             </div>
-            <div class="location">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15143.050553823827!2d75.188240946866!3d18.403650933053367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc48fd908f67c1d%3A0xa6b0cb7782579870!2sKarmala%2C%20Maharashtra%20413203!5e0!3m2!1sen!2sin!4v1718257431211!5m2!1sen!2sin" width="337" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="card-footer">
-               📧 'शालेय परिपाठ' हे पुस्तक मागवण्यासाठी कृपया आपले संपूर्ण नाव, पिनकोडसह पत्ता, फोन नंबर या मोबाईल 8390365366 क्रमांकावर फोन पे अथवा गुगल पे अथवा QR कोडने पैसे सेंड केलेला स्क्रीन शॉट पाठवावा.
-            </div>
-         </article>
          </div>
       </section>  
+
+      <!--// contact end //-->
+
+
       <a href="https://api.whatsapp.com/send?text=hi&phone=+91 8390365366" class="float">
          <i class="fa fa-whatsapp" style="font-size:24px"></i>
          </a>
