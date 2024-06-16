@@ -75,11 +75,15 @@ section{
    margin-top: 100px;
 }
 
-#pricing{
-   height: 100vh;
-   background-color: #3C2C3E;
+#sider{
+   height: 90vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
-
+#sider .slider_div{
+   margin-top: 100px;
+}
 #contact{
    height: 100vh;
 }
@@ -183,12 +187,14 @@ h1{
    justify-content: center;
    align-items: center;
 	box-shadow: 2px 2px 3px #999;
+   z-index: 34093409;
    i{
       font-size:35px;
    }
 }
 
 .float_youtube{
+   z-index: 34093409;
 	position:fixed;
 	width:60px;
 	height:60px;
@@ -207,6 +213,7 @@ h1{
    }
 }
 .float_fesbook{
+   z-index: 34093409;
 	position:fixed;
 	width:60px;
 	height:60px;
@@ -489,6 +496,7 @@ nav a.active {
           <a href="#home" class="active">Home</a>
           <a href="#about">About</a>
           <a href="#product">product</a>
+          <a href="#sider">Book</a>
           <a href="#contact">Contact</a>
       </nav>
   </header>
@@ -523,7 +531,6 @@ nav a.active {
 
             <!--// about end //-->
               <!--* product *--> 
-              <div>
             <section class="section" id="product">
                <div>
                   <div class="product_img_div">
@@ -542,12 +549,24 @@ nav a.active {
                   </div>
                </div>
         </section>
-      </div>
         <!--//product end//-->
+
+        <!--* slider *-->
+         <section class="section" id="sider">
+            <div class="slider_div" >
+               <br><br><br><br>
+               <br><br><br><br>
+               {% include 'html/slider.html' %}
+            </div>
+         </section>
+        <!--// slider end //-->
 
          <!--* contact *-->
         <section class="section text-center" id="contact" >
-         <div class="contact_box">
+           <br><br>
+           <br><br>
+           <br><br>
+           <div class="contact_box">
             <div class="card-list" style="margin: auto;">
                <article class="card">
                <figure class="card-image">
